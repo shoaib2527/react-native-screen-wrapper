@@ -1,11 +1,14 @@
 {
-  "name": "react-native-screen-wrapper",
+  "name": "@shoaib2527/react-native-screen-wrapper",
   "version": "1.0.1",
   "description": "",
   "homepage": "https://github.com/shoaib2527/react-native-screen-wrapper",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Shoaib Ahmed <shoaib.ahmed@emumba.com>",
+  "repository": {
+    "url": "git://github.com/shoaib2527/react-native-screen-wrapper.git"
+  },
   "license": "MIT",
   "files": [
     "lib"

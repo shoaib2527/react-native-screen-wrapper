@@ -88,6 +88,11 @@ All props are optional.
 
 - [@shoaib_ahmed](https://www.github.com/shoaib2527)
 
+## Contributors
+
+- [@m_muheet](https://github.com/muheet707)
+- [@ahmad_hasham](https://www.github.com/hasham24)
+- [@saim_nasser](https://www.github.com/saimnasser)
 
 ## Support
 
@@ -100,4 +105,12 @@ Use this link to support the author.
 
 [Buy Me a Coffee](https://www.buymeacoffee.com/shoaib2527)
 
+
+
+## Used By
+
+This project is used by the following companies:
+
+- Develo IT Solutions
+- Mypro Tech
 
