@@ -1,13 +1,19 @@
-import React, { Fragment } from "react";
-import { SafeAreaView, ScrollView, ScrollViewProps, StatusBar } from "react-native";
+import React, { Fragment } from 'react'
+import {
+  SafeAreaView,
+  ScrollView,
+  ScrollViewProps,
+  StatusBar,
+} from 'react-native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 type props = {
-  children?: any,
-  barStyle?: 'light-content' | 'dark-content',
-  statusBarColor?: string,
-  bottomSafeAreaColor?: string,
-  scrollType?: 'none' | 'scroll',
-  translucent?: boolean,
-  scrollViewPros?: ScrollViewProps
+  children?: any
+  barStyle?: 'light-content' | 'dark-content' | 'default'
+  statusBarColor?: string
+  bottomSafeAreaColor?: string
+  scrollType?: 'none' | 'scroll' | 'keyboard'
+  translucent?: boolean
+  scrollViewProps?: ScrollViewProps
 }
 export const ScreenWrapper = ({
   barStyle = 'light-content',
@@ -15,19 +21,31 @@ export const ScreenWrapper = ({
   bottomSafeAreaColor,
   scrollType = 'none',
   translucent = false,
-  scrollViewPros,
-  children
+  scrollViewProps,
+  children,
 }: props) => {
-  return <Fragment>
-    {!translucent && <SafeAreaView style={{ backgroundColor: statusBarColor }} />}
-    <StatusBar translucent={translucent} barStyle={barStyle} backgroundColor={translucent ? 'transparent' : statusBarColor} />
-    {scrollType === 'none' ?
-      children
-      : scrollType === 'scroll' &&
-      <ScrollView {...scrollViewPros}>
-        {children}
-      </ScrollView>
-    }
-    {bottomSafeAreaColor && <SafeAreaView style={{ backgroundColor: bottomSafeAreaColor }} />}
-  </Fragment>
+  return (
+    <Fragment>
+      {!translucent && (
+        <SafeAreaView style={{ backgroundColor: statusBarColor }} />
+      )}
+      <StatusBar
+        translucent={translucent}
+        barStyle={barStyle}
+        backgroundColor={translucent ? 'transparent' : statusBarColor}
+      />
+      {scrollType === 'scroll' ? (
+        <ScrollView {...scrollViewProps}>{children}</ScrollView>
+      ) : scrollType === 'keyboard' ? (
+        <KeyboardAwareScrollView {...scrollViewProps}>
+          {children}
+        </KeyboardAwareScrollView>
+      ) : (
+        children
+      )}
+      {bottomSafeAreaColor && (
+        <SafeAreaView style={{ backgroundColor: bottomSafeAreaColor }} />
+      )}
+    </Fragment>
+  )
 }

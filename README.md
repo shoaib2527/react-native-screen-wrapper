@@ -78,10 +78,10 @@ All props are optional.
 | Prop Name | Type     | Default     | Description                       |
 | :-------- | :------- | :------- | :-------------------------------- |
 | `barStyle`      | `string` | `light-content` | ***light-content*** OR ***dark-content***|
-| `statusBarColor`      | `string` | `#000` | Status bar background color|
-| `bottomSafeAreaColor`      | `string` | `undefined` | ***IOS Only*** Bottom area (Outside SafeArea) background color|
-| `scrollType`      | `string` | `none` | ***none*** OR ***scroll***|
+| `statusBarColor`      | `string` | `#000` | Status bar background color ***Note:*** This will not be effective if using default Header from [React Navigation](https://reactnavigation.org/)|
 | `translucent`      | `boolean` | `false` | Pass this prop to make status bar translucent|
+| `bottomSafeAreaColor`      | `string` | `undefined` | ***IOS Only*** Bottom area (Outside SafeArea) background color ***Note:*** This will not be effective if using Bottom Tab Navigation from [React Navigation](https://reactnavigation.org/)|
+| `scrollType`      | `string` | `none` | ***none*** OR ***scroll***|
 | `scrollViewPros`      | `object` | `null` | Pass props to Scroll View|
 
 ## Author
