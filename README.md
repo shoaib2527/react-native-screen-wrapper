@@ -1,10 +1,6 @@
-
 # React Native Screen Wrapper
 
 Wrap all your pages inside react-native-screen-wrapper to avoid repetition of commonly used components for every page.
-
-
-
 
 ## Installation
 
@@ -21,7 +17,11 @@ Install with [yarn](https://yarnpkg.com)
 ```bash
   yarn add react-native-screen-wrapper
 ```
-    
+
+## Blog
+
+[Here](https://medium.com/@shoaib.ahmed47564/what-is-react-native-screen-wrapper-77de4f124cbc) is a blog post explaining the usage of React-Native-Screen-Wrapper.
+
 ## Usage
 
 ```javascript
@@ -39,7 +39,7 @@ const App = () => {
 export default App;
 ```
 
-With Scroll Enable
+#### With Scroll Enabled
 
 ```javascript
 ...
@@ -56,7 +56,24 @@ const App = () => {
 export default App;
 ```
 
-With customized Status Bar Styles
+#### With Keyboard Aware Scroll Enabled
+
+```javascript
+...
+import { ScreenWrapper } from 'react-native-screen-wrapper'
+
+const App = () => {
+  const arr = new Array(100).fill(0)
+  return <ScreenWrapper scrollType='keyboard'>
+    <View style={{ flex: 1 }} >
+       {/* Your Content here*/}
+    </View>
+  </ScreenWrapper>
+}
+export default App;
+```
+
+#### With customized Status Bar Styles
 
 ```javascript
 ...
@@ -72,17 +89,18 @@ const App = () => {
 }
 export default App;
 ```
+
 ## Props
 
 All props are optional.
-| Prop Name | Type     | Default     | Description                       |
+| Prop Name | Type | Default | Description |
 | :-------- | :------- | :------- | :-------------------------------- |
-| `barStyle`      | `string` | `light-content` | ***light-content*** OR ***dark-content***|
-| `statusBarColor`      | `string` | `#000` | Status bar background color ***Note:*** This will not be effective if using default Header from [React Navigation](https://reactnavigation.org/)|
-| `translucent`      | `boolean` | `false` | Pass this prop to make status bar translucent|
-| `bottomSafeAreaColor`      | `string` | `undefined` | ***IOS Only*** Bottom area (Outside SafeArea) background color ***Note:*** This will not be effective if using Bottom Tab Navigation from [React Navigation](https://reactnavigation.org/)|
-| `scrollType`      | `string` | `none` | ***none*** OR ***scroll***|
-| `scrollViewPros`      | `object` | `null` | Pass props to Scroll View|
+| `barStyle` | `string` | `light-content` | **_light-content_** OR **_dark-content_** OR **_default_**|
+| `statusBarColor` | `string` | `#000` | Status bar background color **_Note:_** This will not be effective if using default Header from [React Navigation](https://reactnavigation.org/)|
+| `translucent` | `boolean` | `false` | Pass this prop to make status bar translucent|
+| `bottomSafeAreaColor` | `string` | `undefined` | **_IOS Only_** Bottom area (Outside SafeArea) background color **_Note:_** This will not be effective if using Bottom Tab Navigation from [React Navigation](https://reactnavigation.org/)|
+| `scrollType` | `string` | `none` | **_none_** OR **_scroll_** **_none_** OR **_keyboard_**|
+| `scrollViewProps` | `object` | `null` | Pass props to Scroll View|
 
 ## Author
 
@@ -98,14 +116,11 @@ All props are optional.
 
 For support, email shoaib.ahmed@emumba.com
 
-
 ## Buy me a Coffee
 
-Use this link to support the author. 
+Use this link to support the author.
 
 [Buy Me a Coffee](https://www.buymeacoffee.com/shoaib2527)
-
-
 
 ## Used By
 
@@ -113,4 +128,3 @@ This project is used by the following companies:
 
 - Develo IT Solutions
 - Mypro Tech
-
