@@ -1,6 +1,6 @@
 {
   "name": "@shoaib2527/react-native-screen-wrapper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "homepage": "https://github.com/shoaib2527/react-native-screen-wrapper",
   "main": "lib/index.js",
@@ -10,6 +10,14 @@
     "url": "git://github.com/shoaib2527/react-native-screen-wrapper.git"
   },
   "license": "MIT",
+  "keywords": [
+    "react-native-screen-wrapper",
+    "react native screen wrapper",
+    "screen wrapper",
+    "react native",
+    "wrapper",
+    "status bar"
+  ],
   "files": [
     "lib"
   ],
@@ -50,5 +58,8 @@
       "json",
       "node"
     ]
+  },
+  "dependencies": {
+    "react-native-keyboard-aware-scroll-view": "^0.9.5"
   }
 }
